@@ -1,3 +1,30 @@
-This is a simple hello, world demonstration web server.
+# PROVI API
 
-It serves version information on /version and answers any other request like /name by saying "Hello, name!".
+PROVI is a general purpose API designed.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/SomebodyBlacked/provi.git
+cd provi
+```
+
+2. Install the dependencies:
+
+```bash
+go mod download
+```
+
+## Usage
+
+```bash
+go run server.go
+```
+
+## Testing
+
+```bash
+go test
+```
