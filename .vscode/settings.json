@@ -2,4 +2,9 @@
     "window.autoDetectColorScheme": false,
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///home/user/provi/.github/workflows/deploy.yaml"
+    },
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
 }
