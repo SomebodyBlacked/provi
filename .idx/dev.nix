@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   channel = "stable-23.11"; # or "unstable"
   packages = [ pkgs.go ];
+  services.mysql.enable = true;
+  services.mysql.package = pkgs.mysql80;
   idx = {
     extensions = [
       "golang.go"
