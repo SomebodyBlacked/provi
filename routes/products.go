@@ -1,7 +1,8 @@
 package routes
 
 import (
-	"database/sql"
+	"net/http"
+	"provi/database"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -17,9 +18,9 @@ type Product struct {
 }
 
 func Products(c *gin.Context) {
-	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/provi")
+	db, err := database.Connect() // Use the Connect function from db.go
 	if err != nil {
-		c.JSON(500, gin.H{"error": "Error connecting to the database"})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 	defer db.Close()
